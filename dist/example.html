@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+
+<body>
+
+	<p id="test"></p>
+
+	<script src="js/kg.messenger.min.js"></script>
+
+	<script>
+
+		(function(kg) {
+
+			'use strict';
+
+			var test = document.getElementById('test');
+
+			// usage
+			kg.Messenger.on('alert', function() {
+
+				test.innerHTML = 'alert';
+
+			});
+
+			kg.Messenger.broadcast('alert');
+
+			// or provide the on method a third argument to define context
+
+			var obj = {
+				title : 'Yep, this works too'
+			};
+
+			kg.Messenger.on('another alert', function() {
+
+				test.innerHTML = this.title;
+
+			}, obj);
+
+			setTimeout(function() {
+
+				kg.Messenger.broadcast('another alert');
+
+			}, 3000);
+
+		}(window.kg));
+
+	</script>
+	
+</body>
+
+</html>

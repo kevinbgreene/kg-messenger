@@ -1,0 +1,17 @@
+{
+  "name": "kg-messenger",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kevinbgreene/kg-messenger",
+  "authors": [
+    "Kevin B. Greene <hightimesteddy@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dev/js/vendor/",
+    "test",
+    "tests"
+  ]
+}
